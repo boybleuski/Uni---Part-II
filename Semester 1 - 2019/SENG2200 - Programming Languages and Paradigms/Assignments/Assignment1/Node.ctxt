@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=Node
+comment0.text=\r\n\ Defines\ a\ Node\ class,\ used\ to\ traverse\ an\ instance\ of\ the\ \r\n\ MyPolygons\ linked\ list\r\n\r\n\ Author\:\ Sam\ Dolbel\r\n\ Date\ created\:\ 22/3/2019\r\n\ Date\ modified\:\ 22/3/2019\r\n
+comment1.params=poly
+comment1.target=Node(Polygon)
+comment2.params=
+comment2.target=Node\ getNext()
+comment3.params=
+comment3.target=Node\ getPrev()
+comment4.params=
+comment4.target=Polygon\ getData()
+comment5.params=newNext
+comment5.target=void\ setNext(Node)
+comment6.params=newPrev
+comment6.target=void\ setPrev(Node)
+comment7.params=newData
+comment7.target=void\ setData(Polygon)
+numComments=8

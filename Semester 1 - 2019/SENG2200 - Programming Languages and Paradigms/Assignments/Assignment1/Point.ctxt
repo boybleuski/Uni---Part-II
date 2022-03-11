@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Point
+comment0.text=\r\n\ Defines\ a\ Point\ on\ a\ Cartesian\ graph\r\n\r\n\ Author\:\ Sam\ Dolbel\r\n\ Date\ created\:\ 12/3/2019\r\n\ Date\ modified\:\ 12/3/2019\r\n
+comment1.params=
+comment1.target=Point()
+comment1.text=Constructors
+comment2.params=x\ y
+comment2.target=Point(double,\ double)
+comment3.params=
+comment3.target=java.lang.String\ toString()
+comment4.params=
+comment4.target=double\ getX()
+comment5.params=
+comment5.target=double\ getY()
+numComments=6
