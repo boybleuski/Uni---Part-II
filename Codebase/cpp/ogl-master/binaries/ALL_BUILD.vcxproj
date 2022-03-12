@@ -1,0 +1,383 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{AFA8C6FE-5CCC-38CD-9DFF-DB614586B30B}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\samdo\Desktop\programming\cpp\ogl-master\external\AntTweakBar-1.16\include;C:\Users\samdo\Desktop\programming\cpp\ogl-master\external\glfw-3.1.2\include;C:\Users\samdo\Desktop\programming\cpp\ogl-master\external\glm-0.9.7.1;C:\Users\samdo\Desktop\programming\cpp\ogl-master\external\glew-1.13.0\include;C:\Users\samdo\Desktop\programming\cpp\ogl-master\external\assimp-3.0.1270\include;C:\Users\samdo\Desktop\programming\cpp\ogl-master\external\bullet-2.81-rev2613\src;C:\Users\samdo\Desktop\programming\cpp\ogl-master\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\samdo\Desktop\programming\cpp\ogl-master\external\AntTweakBar-1.16\include;C:\Users\samdo\Desktop\programming\cpp\ogl-master\external\glfw-3.1.2\include;C:\Users\samdo\Desktop\programming\cpp\ogl-master\external\glm-0.9.7.1;C:\Users\samdo\Desktop\programming\cpp\ogl-master\external\glew-1.13.0\include;C:\Users\samdo\Desktop\programming\cpp\ogl-master\external\assimp-3.0.1270\include;C:\Users\samdo\Desktop\programming\cpp\ogl-master\external\bullet-2.81-rev2613\src;C:\Users\samdo\Desktop\programming\cpp\ogl-master\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\samdo\Desktop\programming\cpp\ogl-master\external\AntTweakBar-1.16\include;C:\Users\samdo\Desktop\programming\cpp\ogl-master\external\glfw-3.1.2\include;C:\Users\samdo\Desktop\programming\cpp\ogl-master\external\glm-0.9.7.1;C:\Users\samdo\Desktop\programming\cpp\ogl-master\external\glew-1.13.0\include;C:\Users\samdo\Desktop\programming\cpp\ogl-master\external\assimp-3.0.1270\include;C:\Users\samdo\Desktop\programming\cpp\ogl-master\external\bullet-2.81-rev2613\src;C:\Users\samdo\Desktop\programming\cpp\ogl-master\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\samdo\Desktop\programming\cpp\ogl-master\external\AntTweakBar-1.16\include;C:\Users\samdo\Desktop\programming\cpp\ogl-master\external\glfw-3.1.2\include;C:\Users\samdo\Desktop\programming\cpp\ogl-master\external\glm-0.9.7.1;C:\Users\samdo\Desktop\programming\cpp\ogl-master\external\glew-1.13.0\include;C:\Users\samdo\Desktop\programming\cpp\ogl-master\external\assimp-3.0.1270\include;C:\Users\samdo\Desktop\programming\cpp\ogl-master\external\bullet-2.81-rev2613\src;C:\Users\samdo\Desktop\programming\cpp\ogl-master\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\samdo\Desktop\programming\cpp\ogl-master\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/samdo/Desktop/programming/cpp/ogl-master/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+C:\Users\samdo\Desktop\programming\cpp\CMake\bin\cmake.exe -SC:/Users/samdo/Desktop/programming/cpp/ogl-master -BC:/Users/samdo/Desktop/programming/cpp/ogl-master/binaries --check-stamp-file C:/Users/samdo/Desktop/programming/cpp/ogl-master/binaries/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/samdo/Desktop/programming/cpp/ogl-master/CMakeLists.txt;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\CMakeCInformation.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\CMakeCXXInformation.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\CMakeGenericSystem.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\CMakeInitializeConfigs.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\CMakeLanguageInformation.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\CMakeRCInformation.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInformation.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\Compiler\MSVC-C.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\Compiler\MSVC-CXX.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\FindOpenGL.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\FindPackageHandleStandardArgs.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\FindPackageMessage.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-C.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\Platform\Windows.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\Platform\WindowsPaths.cmake;C:\Users\samdo\Desktop\programming\cpp\ogl-master\CMakeLists.txt;C:\Users\samdo\Desktop\programming\cpp\ogl-master\binaries\CMakeFiles\3.14.0-rc1\CMakeCCompiler.cmake;C:\Users\samdo\Desktop\programming\cpp\ogl-master\binaries\CMakeFiles\3.14.0-rc1\CMakeCXXCompiler.cmake;C:\Users\samdo\Desktop\programming\cpp\ogl-master\binaries\CMakeFiles\3.14.0-rc1\CMakeRCCompiler.cmake;C:\Users\samdo\Desktop\programming\cpp\ogl-master\binaries\CMakeFiles\3.14.0-rc1\CMakeSystem.cmake;C:\Users\samdo\Desktop\programming\cpp\ogl-master\external\rpavlik-cmake-modules-fe2273\CleanDirectoryList.cmake;C:\Users\samdo\Desktop\programming\cpp\ogl-master\external\rpavlik-cmake-modules-fe2273\CreateLaunchers.cmake;C:\Users\samdo\Desktop\programming\cpp\ogl-master\external\rpavlik-cmake-modules-fe2273\ListCombinations.cmake;C:\Users\samdo\Desktop\programming\cpp\ogl-master\external\rpavlik-cmake-modules-fe2273\MSVCMultipleProcessCompile.cmake;C:\Users\samdo\Desktop\programming\cpp\ogl-master\external\rpavlik-cmake-modules-fe2273\launcher-templates\targetlauncher.cmd.in;C:\Users\samdo\Desktop\programming\cpp\ogl-master\external\rpavlik-cmake-modules-fe2273\launcher-templates\vcxproj.user.in;C:\Users\samdo\Desktop\programming\cpp\ogl-master\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\samdo\Desktop\programming\cpp\ogl-master\binaries\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/samdo/Desktop/programming/cpp/ogl-master/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+C:\Users\samdo\Desktop\programming\cpp\CMake\bin\cmake.exe -SC:/Users/samdo/Desktop/programming/cpp/ogl-master -BC:/Users/samdo/Desktop/programming/cpp/ogl-master/binaries --check-stamp-file C:/Users/samdo/Desktop/programming/cpp/ogl-master/binaries/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/samdo/Desktop/programming/cpp/ogl-master/CMakeLists.txt;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\CMakeCInformation.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\CMakeCXXInformation.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\CMakeGenericSystem.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\CMakeInitializeConfigs.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\CMakeLanguageInformation.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\CMakeRCInformation.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInformation.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\Compiler\MSVC-C.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\Compiler\MSVC-CXX.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\FindOpenGL.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\FindPackageHandleStandardArgs.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\FindPackageMessage.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-C.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\Platform\Windows.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\Platform\WindowsPaths.cmake;C:\Users\samdo\Desktop\programming\cpp\ogl-master\CMakeLists.txt;C:\Users\samdo\Desktop\programming\cpp\ogl-master\binaries\CMakeFiles\3.14.0-rc1\CMakeCCompiler.cmake;C:\Users\samdo\Desktop\programming\cpp\ogl-master\binaries\CMakeFiles\3.14.0-rc1\CMakeCXXCompiler.cmake;C:\Users\samdo\Desktop\programming\cpp\ogl-master\binaries\CMakeFiles\3.14.0-rc1\CMakeRCCompiler.cmake;C:\Users\samdo\Desktop\programming\cpp\ogl-master\binaries\CMakeFiles\3.14.0-rc1\CMakeSystem.cmake;C:\Users\samdo\Desktop\programming\cpp\ogl-master\external\rpavlik-cmake-modules-fe2273\CleanDirectoryList.cmake;C:\Users\samdo\Desktop\programming\cpp\ogl-master\external\rpavlik-cmake-modules-fe2273\CreateLaunchers.cmake;C:\Users\samdo\Desktop\programming\cpp\ogl-master\external\rpavlik-cmake-modules-fe2273\ListCombinations.cmake;C:\Users\samdo\Desktop\programming\cpp\ogl-master\external\rpavlik-cmake-modules-fe2273\MSVCMultipleProcessCompile.cmake;C:\Users\samdo\Desktop\programming\cpp\ogl-master\external\rpavlik-cmake-modules-fe2273\launcher-templates\targetlauncher.cmd.in;C:\Users\samdo\Desktop\programming\cpp\ogl-master\external\rpavlik-cmake-modules-fe2273\launcher-templates\vcxproj.user.in;C:\Users\samdo\Desktop\programming\cpp\ogl-master\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\samdo\Desktop\programming\cpp\ogl-master\binaries\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/Users/samdo/Desktop/programming/cpp/ogl-master/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+C:\Users\samdo\Desktop\programming\cpp\CMake\bin\cmake.exe -SC:/Users/samdo/Desktop/programming/cpp/ogl-master -BC:/Users/samdo/Desktop/programming/cpp/ogl-master/binaries --check-stamp-file C:/Users/samdo/Desktop/programming/cpp/ogl-master/binaries/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/samdo/Desktop/programming/cpp/ogl-master/CMakeLists.txt;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\CMakeCInformation.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\CMakeCXXInformation.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\CMakeGenericSystem.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\CMakeInitializeConfigs.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\CMakeLanguageInformation.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\CMakeRCInformation.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInformation.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\Compiler\MSVC-C.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\Compiler\MSVC-CXX.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\FindOpenGL.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\FindPackageHandleStandardArgs.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\FindPackageMessage.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-C.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\Platform\Windows.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\Platform\WindowsPaths.cmake;C:\Users\samdo\Desktop\programming\cpp\ogl-master\CMakeLists.txt;C:\Users\samdo\Desktop\programming\cpp\ogl-master\binaries\CMakeFiles\3.14.0-rc1\CMakeCCompiler.cmake;C:\Users\samdo\Desktop\programming\cpp\ogl-master\binaries\CMakeFiles\3.14.0-rc1\CMakeCXXCompiler.cmake;C:\Users\samdo\Desktop\programming\cpp\ogl-master\binaries\CMakeFiles\3.14.0-rc1\CMakeRCCompiler.cmake;C:\Users\samdo\Desktop\programming\cpp\ogl-master\binaries\CMakeFiles\3.14.0-rc1\CMakeSystem.cmake;C:\Users\samdo\Desktop\programming\cpp\ogl-master\external\rpavlik-cmake-modules-fe2273\CleanDirectoryList.cmake;C:\Users\samdo\Desktop\programming\cpp\ogl-master\external\rpavlik-cmake-modules-fe2273\CreateLaunchers.cmake;C:\Users\samdo\Desktop\programming\cpp\ogl-master\external\rpavlik-cmake-modules-fe2273\ListCombinations.cmake;C:\Users\samdo\Desktop\programming\cpp\ogl-master\external\rpavlik-cmake-modules-fe2273\MSVCMultipleProcessCompile.cmake;C:\Users\samdo\Desktop\programming\cpp\ogl-master\external\rpavlik-cmake-modules-fe2273\launcher-templates\targetlauncher.cmd.in;C:\Users\samdo\Desktop\programming\cpp\ogl-master\external\rpavlik-cmake-modules-fe2273\launcher-templates\vcxproj.user.in;C:\Users\samdo\Desktop\programming\cpp\ogl-master\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\samdo\Desktop\programming\cpp\ogl-master\binaries\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Users/samdo/Desktop/programming/cpp/ogl-master/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+C:\Users\samdo\Desktop\programming\cpp\CMake\bin\cmake.exe -SC:/Users/samdo/Desktop/programming/cpp/ogl-master -BC:/Users/samdo/Desktop/programming/cpp/ogl-master/binaries --check-stamp-file C:/Users/samdo/Desktop/programming/cpp/ogl-master/binaries/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/samdo/Desktop/programming/cpp/ogl-master/CMakeLists.txt;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\CMakeCInformation.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\CMakeCXXInformation.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\CMakeGenericSystem.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\CMakeInitializeConfigs.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\CMakeLanguageInformation.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\CMakeRCInformation.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInformation.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\Compiler\MSVC-C.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\Compiler\MSVC-CXX.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\FindOpenGL.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\FindPackageHandleStandardArgs.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\FindPackageMessage.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-C.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\Platform\Windows.cmake;C:\Users\samdo\Desktop\programming\cpp\CMake\share\cmake-3.14\Modules\Platform\WindowsPaths.cmake;C:\Users\samdo\Desktop\programming\cpp\ogl-master\CMakeLists.txt;C:\Users\samdo\Desktop\programming\cpp\ogl-master\binaries\CMakeFiles\3.14.0-rc1\CMakeCCompiler.cmake;C:\Users\samdo\Desktop\programming\cpp\ogl-master\binaries\CMakeFiles\3.14.0-rc1\CMakeCXXCompiler.cmake;C:\Users\samdo\Desktop\programming\cpp\ogl-master\binaries\CMakeFiles\3.14.0-rc1\CMakeRCCompiler.cmake;C:\Users\samdo\Desktop\programming\cpp\ogl-master\binaries\CMakeFiles\3.14.0-rc1\CMakeSystem.cmake;C:\Users\samdo\Desktop\programming\cpp\ogl-master\external\rpavlik-cmake-modules-fe2273\CleanDirectoryList.cmake;C:\Users\samdo\Desktop\programming\cpp\ogl-master\external\rpavlik-cmake-modules-fe2273\CreateLaunchers.cmake;C:\Users\samdo\Desktop\programming\cpp\ogl-master\external\rpavlik-cmake-modules-fe2273\ListCombinations.cmake;C:\Users\samdo\Desktop\programming\cpp\ogl-master\external\rpavlik-cmake-modules-fe2273\MSVCMultipleProcessCompile.cmake;C:\Users\samdo\Desktop\programming\cpp\ogl-master\external\rpavlik-cmake-modules-fe2273\launcher-templates\targetlauncher.cmd.in;C:\Users\samdo\Desktop\programming\cpp\ogl-master\external\rpavlik-cmake-modules-fe2273\launcher-templates\vcxproj.user.in;C:\Users\samdo\Desktop\programming\cpp\ogl-master\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\samdo\Desktop\programming\cpp\ogl-master\binaries\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\samdo\Desktop\programming\cpp\ogl-master\binaries\ZERO_CHECK.vcxproj">
+      <Project>{9D7872D2-44FB-3E21-921E-FA3273D5D880}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\samdo\Desktop\programming\cpp\ogl-master\binaries\external\ANTTWEAKBAR_116_OGLCORE_GLFW.vcxproj">
+      <Project>{819FAD2F-62D5-3AE7-B91E-495FC66C9570}</Project>
+      <Name>ANTTWEAKBAR_116_OGLCORE_GLFW</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\samdo\Desktop\programming\cpp\ogl-master\binaries\external\bullet-2.81-rev2613\src\BulletCollision\BulletCollision.vcxproj">
+      <Project>{EADE7E61-11D5-39E9-8BC3-CDFCADC21C26}</Project>
+      <Name>BulletCollision</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\samdo\Desktop\programming\cpp\ogl-master\binaries\external\bullet-2.81-rev2613\src\BulletDynamics\BulletDynamics.vcxproj">
+      <Project>{AF22B949-B9F8-3211-8E34-38E140016F18}</Project>
+      <Name>BulletDynamics</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\samdo\Desktop\programming\cpp\ogl-master\binaries\external\bullet-2.81-rev2613\src\BulletSoftBody\BulletSoftBody.vcxproj">
+      <Project>{F819017B-9DDA-3E29-B285-20C608151A1F}</Project>
+      <Name>BulletSoftBody</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\samdo\Desktop\programming\cpp\ogl-master\binaries\external\GLEW_1130.vcxproj">
+      <Project>{9FB21132-8221-375F-A723-0A9B3B3407D8}</Project>
+      <Name>GLEW_1130</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\samdo\Desktop\programming\cpp\ogl-master\binaries\external\bullet-2.81-rev2613\src\LinearMath\LinearMath.vcxproj">
+      <Project>{E63E3E9B-1650-3D87-8E76-16B495DA833A}</Project>
+      <Name>LinearMath</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\samdo\Desktop\programming\cpp\ogl-master\binaries\external\assimp-3.0.1270\code\assimp.vcxproj">
+      <Project>{BFAAA12E-74CA-3D2B-B7BA-F3B41759E919}</Project>
+      <Name>assimp</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\samdo\Desktop\programming\cpp\ogl-master\binaries\external\glfw-3.1.2\src\glfw.vcxproj">
+      <Project>{F951EC0E-031D-3E91-8E6A-A42786E7B0CE}</Project>
+      <Name>glfw</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\samdo\Desktop\programming\cpp\ogl-master\binaries\misc05_picking_BulletPhysics.vcxproj">
+      <Project>{27DE60C8-287D-3EAB-A942-FB23966B4888}</Project>
+      <Name>misc05_picking_BulletPhysics</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\samdo\Desktop\programming\cpp\ogl-master\binaries\misc05_picking_custom.vcxproj">
+      <Project>{119C7F92-91C4-3238-8715-936B08C1E7BB}</Project>
+      <Name>misc05_picking_custom</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\samdo\Desktop\programming\cpp\ogl-master\binaries\misc05_picking_slow_easy.vcxproj">
+      <Project>{4A60C06C-40BC-30B5-AF02-39702376ED78}</Project>
+      <Name>misc05_picking_slow_easy</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\samdo\Desktop\programming\cpp\ogl-master\binaries\playground.vcxproj">
+      <Project>{739FD0CB-14C7-3332-BF85-638F5C019778}</Project>
+      <Name>playground</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\samdo\Desktop\programming\cpp\ogl-master\binaries\tutorial01_first_window.vcxproj">
+      <Project>{DB8281AE-5F2C-3F50-8193-6F24242C4923}</Project>
+      <Name>tutorial01_first_window</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\samdo\Desktop\programming\cpp\ogl-master\binaries\tutorial02_red_triangle.vcxproj">
+      <Project>{6D56ACA5-752F-343D-AD02-E95231819052}</Project>
+      <Name>tutorial02_red_triangle</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\samdo\Desktop\programming\cpp\ogl-master\binaries\tutorial03_matrices.vcxproj">
+      <Project>{A0229EA8-CB2B-349B-9072-6CE750F1F70E}</Project>
+      <Name>tutorial03_matrices</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\samdo\Desktop\programming\cpp\ogl-master\binaries\tutorial04_colored_cube.vcxproj">
+      <Project>{149B61C8-CD19-37FC-B9D3-D0BBBBECDF7C}</Project>
+      <Name>tutorial04_colored_cube</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\samdo\Desktop\programming\cpp\ogl-master\binaries\tutorial05_textured_cube.vcxproj">
+      <Project>{9F9E0F51-BDA2-3382-BF70-1D88E3A11692}</Project>
+      <Name>tutorial05_textured_cube</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\samdo\Desktop\programming\cpp\ogl-master\binaries\tutorial06_keyboard_and_mouse.vcxproj">
+      <Project>{9CEEE149-49AB-3AA1-A0DC-C08921CEE800}</Project>
+      <Name>tutorial06_keyboard_and_mouse</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\samdo\Desktop\programming\cpp\ogl-master\binaries\tutorial07_model_loading.vcxproj">
+      <Project>{7A0FACE3-0DF8-34D7-B4A4-02053A8E5FC3}</Project>
+      <Name>tutorial07_model_loading</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\samdo\Desktop\programming\cpp\ogl-master\binaries\tutorial08_basic_shading.vcxproj">
+      <Project>{2AA6ECA2-EB12-3147-B330-69B085AA1758}</Project>
+      <Name>tutorial08_basic_shading</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\samdo\Desktop\programming\cpp\ogl-master\binaries\tutorial09_AssImp.vcxproj">
+      <Project>{5A9AB20E-8F19-35AA-830F-F506EE80DB10}</Project>
+      <Name>tutorial09_AssImp</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\samdo\Desktop\programming\cpp\ogl-master\binaries\tutorial09_several_objects.vcxproj">
+      <Project>{37673018-97CB-3957-AC02-1001805872FC}</Project>
+      <Name>tutorial09_several_objects</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\samdo\Desktop\programming\cpp\ogl-master\binaries\tutorial09_vbo_indexing.vcxproj">
+      <Project>{38A679DA-550D-3CC6-87DA-799D1B923753}</Project>
+      <Name>tutorial09_vbo_indexing</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\samdo\Desktop\programming\cpp\ogl-master\binaries\tutorial10_transparency.vcxproj">
+      <Project>{F5CC1D7D-3D73-3D8C-96B0-2A28724E37F6}</Project>
+      <Name>tutorial10_transparency</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\samdo\Desktop\programming\cpp\ogl-master\binaries\tutorial11_2d_fonts.vcxproj">
+      <Project>{30F613DD-B892-317F-ADA1-0B747C911FC1}</Project>
+      <Name>tutorial11_2d_fonts</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\samdo\Desktop\programming\cpp\ogl-master\binaries\tutorial12_extensions.vcxproj">
+      <Project>{A0C97740-FBD3-3088-9FB5-A6631E1B74AB}</Project>
+      <Name>tutorial12_extensions</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\samdo\Desktop\programming\cpp\ogl-master\binaries\tutorial13_normal_mapping.vcxproj">
+      <Project>{EA28A60E-62D6-3A9F-BFC6-0BAC6ED3B19E}</Project>
+      <Name>tutorial13_normal_mapping</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\samdo\Desktop\programming\cpp\ogl-master\binaries\tutorial14_render_to_texture.vcxproj">
+      <Project>{BBD7F500-37EE-33C6-987C-27382CA76FDD}</Project>
+      <Name>tutorial14_render_to_texture</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\samdo\Desktop\programming\cpp\ogl-master\binaries\tutorial15_lightmaps.vcxproj">
+      <Project>{DFF380BD-FBAF-3CE5-BBA6-6B6F28D59263}</Project>
+      <Name>tutorial15_lightmaps</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\samdo\Desktop\programming\cpp\ogl-master\binaries\tutorial16_shadowmaps.vcxproj">
+      <Project>{CA4961C1-BF66-3765-A294-66A16BE4D582}</Project>
+      <Name>tutorial16_shadowmaps</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\samdo\Desktop\programming\cpp\ogl-master\binaries\tutorial16_shadowmaps_simple.vcxproj">
+      <Project>{A0C2F849-EAA0-3887-8863-5451D8B8DEFF}</Project>
+      <Name>tutorial16_shadowmaps_simple</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\samdo\Desktop\programming\cpp\ogl-master\binaries\tutorial17_rotations.vcxproj">
+      <Project>{21E6B54F-FE0A-3AE2-9D74-6F7A7F7A40D9}</Project>
+      <Name>tutorial17_rotations</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\samdo\Desktop\programming\cpp\ogl-master\binaries\tutorial18_billboards.vcxproj">
+      <Project>{5ADFCB31-6A09-3380-BB7F-D37A21623987}</Project>
+      <Name>tutorial18_billboards</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\samdo\Desktop\programming\cpp\ogl-master\binaries\tutorial18_particles.vcxproj">
+      <Project>{007B711F-925F-33C0-AFBF-689807AE1ECD}</Project>
+      <Name>tutorial18_particles</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\samdo\Desktop\programming\cpp\ogl-master\binaries\external\assimp-3.0.1270\contrib\zlib\zlib.vcxproj">
+      <Project>{45FD057E-467E-3F62-8724-29B63F34D5F5}</Project>
+      <Name>zlib</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

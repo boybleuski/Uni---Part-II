@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\samdo\Desktop\programming\cpp\ogl-master\tutorial03_matrices\tutorial03.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\samdo\Desktop\programming\cpp\ogl-master\common\shader.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\samdo\Desktop\programming\cpp\ogl-master\common\shader.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\samdo\Desktop\programming\cpp\ogl-master\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\samdo\Desktop\programming\cpp\ogl-master\tutorial03_matrices\SimpleTransform.vertexshader">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="C:\Users\samdo\Desktop\programming\cpp\ogl-master\tutorial03_matrices\SingleColor.fragmentshader">
+      <Filter>shaders</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{CB21FE8B-4B18-39D1-89CC-6B46B83D35A4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common">
+      <UniqueIdentifier>{78209C23-748C-3A4D-895D-B3908651CDE6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="shaders">
+      <UniqueIdentifier>{E795932E-4845-374C-9FB1-838F3BE37265}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
