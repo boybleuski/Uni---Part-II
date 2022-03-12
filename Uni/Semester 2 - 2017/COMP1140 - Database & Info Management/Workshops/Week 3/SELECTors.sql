@@ -1,5 +1,0 @@
--- SELECT customer FROM Account WHERE accNo = '6123-1234568';
--- SELECT * FROM Account WHERE Balance > 5000;
--- SELECT accNo FROM Account WHERE customer = 'Peter Wang';
--- SELECT * FROM Account WHERE accountType = 'Cheque' AND Balance > 1000;
--- SELECT * FROM Account WHERE customer = 'Ally Kent' OR customer = 'Peter Wang';

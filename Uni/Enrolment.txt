@@ -16,9 +16,6 @@ Semester 2 - 2018
 	COMP1140 - Database and Information Management			66
 	COMP3320 - Computer Graphics					NN
 
-Semester 1 - 2019
-	We don't talk about Semester 1 - 2019.
-
 Semester 2 - 2019
 	COMP2240 - Operating Systems					58
 	SENG2260 - Human-Computer Interaction				67
@@ -47,5 +44,4 @@ Semester 1 - 2022
 	COMP3851A - CS Work Integrated Learning Project Part A
 
 Semester 2 - 2022
-	SENG4500 - Network and Distributed Computing
 	COMP3851B - CS Work Integrated Learning Project Part B

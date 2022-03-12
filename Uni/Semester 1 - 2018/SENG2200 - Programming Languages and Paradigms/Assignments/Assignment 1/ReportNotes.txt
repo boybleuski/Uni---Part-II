@@ -1,9 +1,0 @@
-19/03/2018: 18:00 - 18:30
-    Wrote rough UML diagrams of the classes - Point, Polygon, MyPolygons, and the interface ComparePoly
-
-20/03/2018: 12:00 - 14:00
-    Built Point class and started interface, used dummy data to test functionality
-    Learned about <cmath> and <string>
-
-20/03/2018: 14:00 - 16:00
-    Finished Point class and developed proper output
