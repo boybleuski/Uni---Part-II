@@ -1,0 +1,36 @@
+InitSystem: fe8_edited.GBA ver: FE8U length: 12A3DF0 FEBuilderGBA: 20211211.20
+There is no FORM.
+C:\Users\samdo\Desktop\programming\game_design\FE8 Hacking\FEBuilderGBA\config\patch2\FE8U\Growth_Mod\MOD_Growth_Mod.txt
+
+InitSystem: fe8_edited.GBA ver: FE8U length: 12BCAB0 FEBuilderGBA: 20211211.20
+There is no FORM.
+C:\Users\samdo\Desktop\programming\game_design\FE8 Hacking\FEBuilderGBA\config\patch2\FE8U\Growth_Mod\MOD_Growth_Mod.txt
+
+0x9ECEC0@12 Write:Death Quote  (EventHaikuForm) @40 Kel ( Ch.15: Lies And Slander) 20220220202919
+0x9ECD58@12 Write:Death Quote  (EventHaikuForm) @46 Breguet ( Ch.1: Desperate Times) 20220220202940
+0x01002550@4 0x0F6416@36 Write:Source  (TextForm) =TEXT:0935  20220220203442
+0x01002554@4 0x0F643A@28 Write:Source  (TextForm) =TEXT:0936  20220220204230
+0x0F6456@320 Write:Source  (TextForm) =TEXT:0937  20220220204402
+0x0F6596@280 Write:Source  (TextForm) =TEXT:0938  20220220204702
+0x0F6596@17 Write:Source  (TextForm) =TEXT:0938  20220220204716
+0x9ECD58@12 Write:Death Quote  (EventHaikuForm) @40 Kel ( Ch.1: Desperate Times) 20220220204726
+0x9EC6CC@16 Write:Battle Conversation  (EventBattleTalkForm) @00 ANY -> 68 O'Neill ( Prologue: Raiders) 20220220204836
+Are you sure you want to overwrite with clipboard data?
+0x9EC6DC@16 Write:Battle Conversation  (EventBattleTalkForm)  20220220204917
+0x9EC6DC@16 Write:Battle Conversation  (EventBattleTalkForm) @00 ANY -> 40 Kel ( Ch.1: Desperate Times) 20220220204926
+Are you sure you want to overwrite with clipboard data?
+0x9EC6EC@16 Write:Battle Conversation  (EventBattleTalkForm)  20220220204929
+0x9EC6EC@16 Write:Battle Conversation  (EventBattleTalkForm) @00 ANY -> 40 Kel ( Ch.1: Desperate Times) 20220220204942
+Are you sure you want to overwrite with clipboard data?
+0x9EC6FC@16 Write:Battle Conversation  (EventBattleTalkForm)  20220220204947
+0x9EC6FC@16 Write:Battle Conversation  (EventBattleTalkForm) @01 Iris -> 40 Kel ( Ch.1: Desperate Times) 20220220204952
+Are you sure you want to overwrite with clipboard data?
+0x9EC70C@16 Write:Battle Conversation  (EventBattleTalkForm)  20220220205003
+0x9EC70C@16 Write:Battle Conversation  (EventBattleTalkForm) @00 ANY -> 40 Kel ( Ch.1: Desperate Times) 20220220205023
+Are you sure you want to overwrite with clipboard data?
+0x9EC71C@16 Write:Battle Conversation  (EventBattleTalkForm)  20220220205026
+0x9EC71C@16 Write:Battle Conversation  (EventBattleTalkForm) @03 Caleb -> 40 Kel ( Ch.1: Desperate Times) 20220220205034
+0x01002558@4 0x0F6456@118 Write:Source  (TextForm) =TEXT:0937  20220220205103
+0x9EC71C@16 Write:Battle Conversation  (EventBattleTalkForm) @40 Kel -> 03 Caleb ( Ch.1: Desperate Times) 20220220205105
+0x012BCC24@119 Write:Source  (TextForm) =TEXT:0937  20220220205116
+0x9EC71C@16 Write:Battle Conversation  (EventBattleTalkForm) @40 Kel -> 03 Caleb ( Ch.1: Desperate Times) 20220220205119
