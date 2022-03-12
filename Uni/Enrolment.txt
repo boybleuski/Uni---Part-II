@@ -37,7 +37,6 @@ Semester 2 - 2021
 	COMP2230 - Algorithms						77
 	ELEC3500 - Telecommunication Networks				77
 	
-
 Semester 1 - 2022
 	SENG2050 - Web Engineering
 	INFT3100 - Project Management
