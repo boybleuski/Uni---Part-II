@@ -1,0 +1,90 @@
+package Assignment3;
+
+import java.io.UnsupportedEncodingException;
+import java.math.BigInteger;
+import java.util.Arrays;
+import java.util.Base64;
+import java.util.Random;
+
+import javax.crypto.BadPaddingException;
+import javax.crypto.Cipher;
+import javax.crypto.IllegalBlockSizeException;
+import javax.crypto.KeyGenerator;
+import javax.crypto.NoSuchPaddingException;
+import javax.crypto.spec.SecretKeySpec;
+
+import java.security.InvalidAlgorithmParameterException;
+import java.security.InvalidKeyException;
+import java.security.Key;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.security.SecureRandom;
+
+public class Assignment3 
+{
+    private static SecretKeySpec secretKey;
+    private static byte[] key;
+    
+	public static void main (String[] args) throws Exception
+	{	    			
+		Client client = new Client();
+		Server server = new Server();
+		
+		
+      KeyGenerator keyGen = KeyGenerator.getInstance("AES");
+      
+      //Creating a SecureRandom object
+      SecureRandom secRandom = new SecureRandom();
+      
+      //Initializing the KeyGenerator
+      keyGen.init(secRandom);
+      
+      //Creating/Generating a key
+      Key key = keyGen.generateKey();
+      System.out.println(key);
+      
+      Cipher cipher = Cipher.getInstance("AES/CBC/NoPadding");      
+      cipher.init(cipher.ENCRYPT_MODE, key);      
+
+      String msg = new String("Clients are superior to a server, who should simply stop trying.");
+      byte[] bytes = cipher.doFinal(msg.getBytes());   
+      System.out.println(bytes);      
+      byte[] plainText = cipher.doFinal(bytes);
+      System.out.println(plainText);      
+		
+		
+		
+		
+		
+		
+		
+		
+		// initial connection - send "Hello" from client to server, share public key 
+		ClientMessage clientMessage = client.ConnectToServer();
+		server.ReceiveConnection(clientMessage);
+		System.out.println();
+		
+		// server shares public key with client
+		client.ReceivePublicKey(server.SendPublicKey());
+		System.out.println();
+		
+		// server and client share IDs
+		client.ReceiveHello(server.SendHello());
+		System.out.println();
+		server.ReceiveHello(client.SendHello());
+		System.out.println();
+
+		// Client and server generate a public key each and exchange
+		client.ReceiveDHKey(server.SendDHKey());
+		System.out.println();
+		server.ReceiveDHKey(client.SendDHKey());
+
+		System.out.println();
+		client.CombineAndEncryptDHKey();
+		server.CombineAndEncryptDHKey();
+				
+		ClientMessage en = client.SendEncryptedMessage();
+		String mm = client.ReceiveEncryptedMessage(en);
+		System.out.println(mm);
+	}
+}

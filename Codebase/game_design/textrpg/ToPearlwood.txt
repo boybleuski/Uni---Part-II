@@ -1,0 +1,4 @@
+NPCs
+type: wealth/unique + job, animal
+	wealth: poor|average|rich
+	animal: bear, cat, chicken, cow, dog, dragon, fox, giantinsect, insectswarm, pigeon, rabbit, rat, wolf

@@ -1,0 +1,14 @@
+package Assignment3;
+
+public class Server 
+{
+	public Server()
+	{
+		
+	}
+	
+	public ServerMessage Connect()
+	{
+		return new ServerMessage().GreetingMessage();
+	}
+}
