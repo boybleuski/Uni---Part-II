@@ -1,0 +1,37 @@
+package Assignment3;
+
+import java.math.BigInteger;
+
+public class ServerMessage 
+{
+	private String messageBody;
+	private BigInteger key;
+	private BigInteger[] keyPair;
+	private BigInteger[] keyTrio;
+	
+	public ServerMessage(String serverMessage)
+	{
+		messageBody = serverMessage;
+	}
+	
+	public ServerMessage(BigInteger value)
+	{
+		key = value;
+	}
+	
+	public ServerMessage(String serverMessage, BigInteger value)
+	{
+		messageBody = serverMessage;
+		key = value;
+	}
+	
+	public String ReadMessage()
+	{
+		return messageBody;
+	}
+	
+	public BigInteger ReadKey()
+	{
+		return key;
+	}
+}

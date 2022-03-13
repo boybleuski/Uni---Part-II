@@ -1,0 +1,22 @@
+package Assignment3;
+
+public class Client 
+{
+	private ClientMessage message;
+	
+	public Client()
+	{
+		message = ConnectToServer();
+	}
+	
+	public ClientMessage SendMessage()
+	{
+		return message;
+	}
+	
+	public ClientMessage ConnectToServer()
+	{
+		message = new ClientMessage("Hello.");
+		return message;
+	}
+}

@@ -1,0 +1,16 @@
+package Assignment3;
+
+public class ClientMessage 
+{
+	private String message;
+	
+	public ClientMessage(String clientMessage)
+	{
+		message = clientMessage;
+	}
+	
+	public String GetMessage()
+	{
+		return message;
+	}
+}

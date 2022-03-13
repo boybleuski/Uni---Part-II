@@ -1,0 +1,17 @@
+package Assignment3;
+
+import java.util.List;
+import java.util.Map;
+
+public class Server 
+{
+	public Server()
+	{
+		
+	}
+	
+	public void Connect()
+	{
+		JSONObject obj = new JSONObject();
+	}
+}

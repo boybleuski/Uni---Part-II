@@ -1,0 +1,14 @@
+package Assignment3;
+
+public class Server 
+{
+	public Server()
+	{
+		
+	}
+	
+	public void Connect()
+	{
+		
+	}
+}

@@ -1,0 +1,13 @@
+import java.util.*;
+import java.math.BigInteger;
+
+public class Main 
+{
+	public static void main(String[] args) 
+	{
+		System.out.println("Hi!");
+		BigInteger val1 = BigInteger.valueOf(1);
+		BigInteger val2 = BigInteger.valueOf(2);
+		System.out.println(val1.gcd(val2));
+	}
+}

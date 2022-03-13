@@ -1,0 +1,9 @@
+package Assignment3;
+
+public class ClientMessage 
+{
+	public ClientMessage()
+	{
+		
+	}
+}

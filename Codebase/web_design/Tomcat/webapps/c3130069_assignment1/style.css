@@ -1,0 +1,40 @@
+table
+{
+   text-align: center;
+   width: 50em;
+   height: 2.5em;
+   border: 2px solid black;
+}
+
+td, th
+{
+   font-size: 2em;
+   border: 1px solid black;
+}
+
+td:hover
+{
+   background-color: #6666FF;
+}
+
+th
+{
+   background-color: grey;
+}
+
+td a, th a
+{
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+h1
+{
+   color: yellow;
+}
+
+#clock
+{
+  font-size: 4vw;
+}

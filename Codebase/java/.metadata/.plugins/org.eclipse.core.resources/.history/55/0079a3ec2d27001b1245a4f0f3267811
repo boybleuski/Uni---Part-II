@@ -1,0 +1,19 @@
+package Assignment3;
+
+import java.math.BigInteger;
+
+public class ServerMessage 
+{
+	private String messageBody;
+	private BigInteger bigIntValue;
+	
+	public ServerMessage(String serverMessage)
+	{
+		messageBody = serverMessage;
+	}
+	
+	public String ReadMessage()
+	{
+		return messageBody;
+	}
+}

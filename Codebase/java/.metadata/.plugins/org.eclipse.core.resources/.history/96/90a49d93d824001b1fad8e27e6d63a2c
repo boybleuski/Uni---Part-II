@@ -1,0 +1,16 @@
+package Assignment3;
+
+public class ServerMessage 
+{
+	private String messageBody;
+	
+	public ServerMessage(String serverMessage)
+	{
+		messageBody = serverMessage;
+	}
+	
+	public String ReadMessage()
+	{
+		return message;
+	}
+}

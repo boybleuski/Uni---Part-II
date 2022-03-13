@@ -1,0 +1,14 @@
+private static int compareTo(BigInteger x, BigInteger y)
+{
+	if (x.words == null && y.words == null)
+		return x.ival < y.ival ? -1 : x.ival > y.ival ? 1 : 0;
+	boolean x_negative = x.isNegative();
+	boolean y_negative = y.isNegative();
+	if (x_negative != y_negative)
+		return x_negative ? -1 : 1;
+	int x_len = x.words == null ? 1 : x.ival;
+	int y_len = y.words == null ? 1 : y.ival;
+	if (x_len != y_len)
+		return (x_len > y_len) != x_negative ? 1 : -1;
+	return MPN.cmp(x.words, y.words, x_len);
+}

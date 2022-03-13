@@ -1,0 +1,21 @@
+package Assignment3;
+
+public class Server 
+{
+	ServerMessage serverMessage;
+	
+	public Server()
+	{
+		
+	}
+	
+	public ServerMessage SendMessage()
+	{
+		return serverMessage;
+	}
+	
+	public void ReceiveMessage(ClientMessage clientMessage)
+	{
+		
+	}
+}

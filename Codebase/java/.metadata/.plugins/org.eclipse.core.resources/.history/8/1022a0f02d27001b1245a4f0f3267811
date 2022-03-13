@@ -1,0 +1,19 @@
+package Assignment3;
+
+import java.math.BigInteger;
+
+public class ClientMessage 
+{
+	private String messageBody;
+	private BigInteger clientID;
+	
+	public ClientMessage(String clientMessage)
+	{
+		messageBody = clientMessage;
+	}
+	
+	public String ReadMessage()
+	{
+		return messageBody;
+	}
+}

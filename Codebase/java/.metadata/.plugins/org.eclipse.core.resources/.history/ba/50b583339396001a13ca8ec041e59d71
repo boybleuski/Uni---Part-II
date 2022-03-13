@@ -1,0 +1,38 @@
+
+public class Node 
+{
+    Node previous;	// the previous polygon in the list of polygons
+    Node next;		// the next polygon in the list of polygons
+    PlanarShape data;
+    
+    public Node(PlanarShape _data)
+    {
+    	data = _data;
+    }
+
+    public Node GetPrevious()	// return the previous polygon in the list of polygons
+    {
+        if (previous == null)
+            return this;
+        else
+            return previous;
+    }
+
+    public Node GetNext()	// return the next polygon in the list of polygons
+    {
+        if (next == null)
+            return this;
+        else
+            return next;
+    }
+
+    public void SetPrevious(Node _previous) // set the previous polygon as the parameter in the list of polygons
+    {
+        previous = _previous;
+    }
+
+    public void SetNext(Node _next)	// set the next polygon as the parameter in the list of polygons
+    {
+        next = _next;
+    }
+}

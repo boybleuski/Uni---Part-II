@@ -1,0 +1,11 @@
+package Assignment3;
+
+public class ClientMessage 
+{
+	String message;
+	
+	public ClientMessage(String clientMessage)
+	{
+		message = clientMessage;
+	}
+}

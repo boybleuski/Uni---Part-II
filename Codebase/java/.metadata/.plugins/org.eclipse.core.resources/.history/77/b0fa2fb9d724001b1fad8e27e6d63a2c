@@ -1,0 +1,117 @@
+package Assignment3;
+
+import java.math.BigInteger;
+import java.util.Random;
+import java.security.MessageDigest;
+
+public class Assignment3 
+{
+	// common BigIntegers
+	private static BigInteger bigIntZero = new BigInteger("0");
+	private static BigInteger bigIntOne = new BigInteger("1");
+	private static BigInteger bigIntTwo = new BigInteger("2");
+	private static BigInteger diffieP = new BigInteger("178011905478542266528237562450159990145232156369120674273274450314442865788737020770612695252123463079567156784778466449970650770920727857050009668388144034129745221171818506047231150039301079959358067395348717066319802262019714966524135060945913707594956514672855690606794135837542707371727429551343320695239");
+	private static BigInteger diffieG = new BigInteger("174068207532402095185811980123523436538604490794561350978495831040599953488455823147851597408940950725307797094915759492368300574252438761037084473467180148876118103083043754985190983472601550494691329488083395492313850000361646482644608492304078721818959999056496097769368017749273708962006689187956744210730");
+	private final BigInteger e = new BigInteger("65537");
+	
+	public static void main (String[] args)
+	{
+		Client client = new Client();
+		Server server = new Server();
+				
+		System.out.println(client.GetMessage());
+		
+		// fast exponentiation
+		System.out.println(FastExponentation(new BigInteger("2"), new BigInteger("2")));
+		
+		
+		// generate large primes for RSA key		
+		BigInteger rsaPrimeA = GeneratePrime(1024);
+		BigInteger rsaPrimeB = GeneratePrime(1024);
+		
+		//GetSha256("oh hell no");	
+				
+	}
+	
+	
+	
+	// fast exponentiation
+	public static BigInteger FastExponentation(BigInteger a, BigInteger b)
+	{		
+		// given x^y, where y = 1.
+		if (b.equals(bigIntOne))
+			return a;
+		
+		// given x^y, where y = 2.
+		else if (b.equals(bigIntTwo))
+			return a.multiply(a);
+		
+		// given x^y, where y is even.
+		else if (b.mod(bigIntTwo).equals(bigIntZero))
+			return FastExponentation(FastExponentation(a, b.divide(bigIntTwo)), bigIntTwo);
+		
+		// given x^y, where y is odd.
+		else
+			return a.multiply(FastExponentation(FastExponentation(a, (b.subtract(bigIntOne)).divide(bigIntTwo)), bigIntTwo));
+	}
+	
+	
+	
+	public static BigInteger GeneratePrime(int bitSize)
+	{
+		boolean primeFound = false;
+		BigInteger primeCandidate = new BigInteger("");
+		
+		while (primeFound == false)
+		{
+			primeCandidate = new BigInteger(1024, new Random());
+			
+			if (IsPrime(primeCandidate))
+				primeFound = true;
+		}
+		
+		return primeCandidate;
+	}
+	
+	
+	
+	public static boolean IsPrime(BigInteger primeValue)
+	{
+		if (primeValue.equals(bigIntZero) || primeValue.equals(bigIntOne) || primeValue.mod(bigIntTwo).equals(bigIntZero))
+			return false;
+		if (primeValue.equals(bigIntTwo))
+			return true;
+		
+		BigInteger intCompare = primeValue.subtract(bigIntOne);
+		
+		while (intCompare.mod(bigIntTwo).equals(bigIntZero))
+			intCompare = intCompare.divide(bigIntTwo);
+		
+		return true;
+	}
+	
+	
+	
+	public static String GetSha256(String value) 
+	{
+		try
+		{
+	        MessageDigest md = MessageDigest.getInstance("SHA-256");
+	        md.update(value.getBytes());
+	        return bytesToHex(md.digest());
+		} 
+		catch(Exception ex)
+		{
+		    throw new RuntimeException(ex);
+		}
+	}
+	
+	
+	
+	private static String bytesToHex(byte[] bytes) 
+	{
+		StringBuffer result = new StringBuffer();
+		for (byte b : bytes) result.append(Integer.toString((b & 0xff) + 0x100, 16).substring(1));
+		return result.toString();
+	}
+}

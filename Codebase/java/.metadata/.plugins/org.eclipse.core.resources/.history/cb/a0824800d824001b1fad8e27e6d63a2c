@@ -1,0 +1,27 @@
+package Assignment3;
+
+public class Client 
+{
+	private ClientMessage clientMessage;
+	
+	public Client()
+	{
+		message = ConnectToServer();
+	}
+	
+	public ClientMessage SendMessage()
+	{
+		return message;
+	}
+	
+	public void ReceiveMessage(ServerMessage serverMessage)
+	{
+		return message;
+	}
+	
+	public ClientMessage ConnectToServer()
+	{
+		message = new ClientMessage("Hello.");
+		return message;
+	}
+}

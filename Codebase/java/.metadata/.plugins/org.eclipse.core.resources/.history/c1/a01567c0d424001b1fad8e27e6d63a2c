@@ -1,0 +1,17 @@
+package Assignment3;
+
+public class ServerMessage 
+{
+	String message;
+	
+	public ServerMessage()
+	{
+		
+	}
+	
+	public ServerMessage GetGreetingMessage()
+	{
+		message = "Hello";
+		return this;
+	}
+}

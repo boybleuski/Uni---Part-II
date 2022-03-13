@@ -1,0 +1,77 @@
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Calculator</title>
+
+    <script type="text/javascript">
+      function add()
+      {
+        var x = window.document.calculate.input1.value;
+        var y = window.document.calculate.input2.value;
+        var result = x + y;
+				alert(x + " times " + y + " is " + result);
+      }
+
+      function subtract()
+      {
+        var x = window.document.calculate.input1.value;
+        var y = window.document.calculate.input2.value;
+        var result = x - y;
+				alert(x + " times " + y + " is " + result);
+      }
+
+      function multiply()
+      {
+        var x = window.document.calculate.input1.value;
+        var y = window.document.calculate.input2.value;
+        var result = x * y;
+				alert(x + " times " + y + " is " + result);
+      }
+
+      function divide()
+      {
+        var x = window.document.calculate.input1.value;
+        var y = window.document.calculate.input2.value;
+        var result = x / y;
+				alert(x + " times " + y + " is " + result);
+      }
+
+      function power()
+      {
+        var x = window.document.calculate.input1.value;
+        var y = window.document.calculate.input2.value;
+        var result = Math.pow(x, y);
+				alert(x + " times " + y + " is " + result);
+      }
+
+      function root()
+      {
+        var x = window.document.calculate.input1.value;
+        var y = window.document.calculate.input2.value;
+        var result = Math.pow(x, 1/y);
+				alert(x + " times " + y + " is " + result);
+      }
+
+      function clear()
+      {
+        var result = 0;
+      }
+    </script>
+  </head>
+
+  <body>
+    <p>Just a simple little calculator...</p>
+    <form name="calculate">
+      <input type="text" name="input1"/><br />
+      <input type="text" name="input2"/><br />
+      <input type="image" src="add.png" onClick="javascript:add()"/>
+      <input type="image" src="subtract.png" onClick="javascript:subtract()"/>
+      <input type="image" src="multiply.png" onClick="javascript:multiply()"/>
+      <input type="image" src="divide.png" onClick="javascript:divide()"/>
+      <input type="image" src="power.png" onClick="javascript:power()"/>
+      <input type="image" src="root.png" onClick="javascript:root()"/>
+      <input type="image" src="clear.png" onClick="javascript:clear()"/>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+  <title>Affinity Handmade Gifts</title>
+  <link href="affMain.css" rel="stylesheet" type="text/css">
+  <head>
+    <meta charset="UTF-8">
+  </head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $("button").click(function(){
+        $("#box1").fadeIn();
+      });
+    });
+  </script>
+
+  <body>
+    <h1>Affinity Handmade Gifts</h1>
+    <button>Click me</button>
+    <div id="box1" style="width:6em; height:6em; background-color:red; text-align:center "></div>
+
+  </body>

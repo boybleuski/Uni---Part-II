@@ -1,0 +1,68 @@
+/* Kerrie's Handmade Gifts */
+
+/* General */
+body {
+  margin: 0px;
+  background: url(../resources/wood-grain-texture.png);
+  background-size: cover;
+}
+
+a {
+  text-decoration: none;
+  color: inherit
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.box {
+  height: 40px; 
+  margin-bottom: 2em;
+  color: white;
+  font-size: 25pt;
+  font-variant: small-caps;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.box1 {
+  margin-left: 2em;
+}
+
+.box2 {
+  margin-left: 9em;
+}
+
+.box3 {
+  margin-left: 17em;
+}
+
+.box4 {
+  margin-left: 25em;
+}
+
+.box5 {
+  margin-left: 33em;
+}
+
+/* Main */
+.main-title {
+  background-color: rgba(255, 191, 128, 0.6);
+  height: 150px;
+  color: white;
+  font-size: 60px;
+  font-family: 'Monotype Corsiva';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Woodcrafts */
+
+/* Swarovski Jewellery */
+
+/* Paintings */
+
+/* Contact Us */

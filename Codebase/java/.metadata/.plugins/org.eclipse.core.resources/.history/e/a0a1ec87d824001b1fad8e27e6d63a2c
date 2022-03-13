@@ -1,0 +1,15 @@
+package Assignment3;
+
+public class ServerMessage 
+{
+	private String messageBody;
+	
+	public ServerMessage()
+	{
+	}
+	
+	public String GetGreetingMessage()
+	{
+		return message;
+	}
+}

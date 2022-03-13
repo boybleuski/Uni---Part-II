@@ -1,0 +1,60 @@
+package Assignment3;
+
+import java.io.UnsupportedEncodingException;
+import java.math.BigInteger;
+import java.util.Arrays;
+import java.util.Base64;
+import java.util.Random;
+
+import javax.crypto.BadPaddingException;
+import javax.crypto.Cipher;
+import javax.crypto.IllegalBlockSizeException;
+import javax.crypto.NoSuchPaddingException;
+import javax.crypto.spec.SecretKeySpec;
+
+import java.security.InvalidAlgorithmParameterException;
+import java.security.InvalidKeyException;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+
+public class Assignment3 
+{
+    private static SecretKeySpec secretKey;
+    private static byte[] key;
+    
+	public static void main (String[] args) throws Exception
+	{	    			
+		Client client = new Client();
+		Server server = new Server();
+		
+		// initial connection - send "Hello" from client to server, share public key 
+		ClientMessage clientMessage = client.ConnectToServer();
+		server.ReceiveConnection(clientMessage);
+		System.out.println();
+		
+		// server shares public key with client
+		client.ReceivePublicKey(server.SendPublicKey());
+		System.out.println();
+		
+		// server and client share IDs
+		client.ReceiveHello(server.SendHello());
+		System.out.println();
+		server.ReceiveHello(client.SendHello());
+		System.out.println();
+
+		// Client and server generate a public key each and exchange
+		client.ReceiveDHKey(server.SendDHKey());
+		System.out.println();
+		server.ReceiveDHKey(client.SendDHKey());
+
+		System.out.println();
+		client.CombineAndEncryptDHKey();
+		server.CombineAndEncryptDHKey();
+				
+		ClientMessage en = client.SendEncryptedMessage();
+		String mm = client.ReceiveEncryptedMessage(en);
+		System.out.println(mm);
+		Utility.HexToByteArray("86253a9c24684a0c2db4fbe8d995eb0d");
+		Utility.HexToByteArray("4fab896aa3880178b787ed98fa8990d983b5a450f9e6da6416323a64273a10e7");
+	}
+}
