@@ -9,75 +9,54 @@ import java.text.SimpleDateFormat;
 
 @WebServlet(urlPatterns = {"/ForumPage"})
 public class ForumPage extends HttpServlet {
-    private final String FILE_LOCATION = "../webapps/Assignment1/WEB-INF/";
     private List<String> messageList = new ArrayList<String>();
 
+    /** ForumPage GET method - called on load.
+     * @param (HttpServletRequest) request - GET request.
+     * @param (HttpServletResponse) response - GET response.
+     * @throws ServletException
+     * @throws IOException
+     */
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        FileReader fReader = new FileReader(FILE_LOCATION + "ForumPage.html");
-        BufferedReader bReader = new BufferedReader(fReader);
-        StringBuilder htmlContent = new StringBuilder(1024);
-        String str = "";
+        String html = HtmlGen.head("Discussion Board");
+        html += "<body>" + HtmlGen.h1("Discussion Board");
+        html += HtmlGen.messageTable(messageList);
 
-        if (request.getParameter("userName") != null) {
-            messageList.add(buildMessage(request.getParameter("userName"), request.getParameter("msgTitle"), request.getParameter("msgContent")));
-        }
+        html += HtmlGen.form("ForumPage");
 
-        System.out.println(messageList);
-        while((str=bReader.readLine()) != null) {
-            htmlContent.append(str);
-            if (str.contains("messageList") && messageList.size() > 0) {
-                htmlContent.append(outputMessageList(messageList));
-            }
-        } 
-        
         PrintWriter out = response.getWriter();
-        out.println(htmlContent);
+        out.println(html);
     }
 
+
+    /** ForumPage POST method - called when form is submitted.
+     * @param (HttpServletRequest) request - POST request.
+     * @param (HttpServletResponse) response - POST response.
+     * @throws ServletException
+     * @throws IOException
+     */
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        FileReader fReader = new FileReader(FILE_LOCATION + "ForumPage.html");
-        BufferedReader bReader = new BufferedReader(fReader);
-        StringBuilder htmlContent = new StringBuilder(1024);
-        String str = "";
-
-        if (request.getParameter("userName") != null) {
-            messageList.add(buildMessage(request.getParameter("userName"), request.getParameter("msgTitle"), request.getParameter("msgContent")));
+        int id = messageList.size();
+        if (request.getParameter("id") != null) {
+            id = Integer.parseInt(request.getParameter("id"));
         }
+        
+        String userName = request.getParameter("userName");
+        String msgContent = request.getParameter("msgContent");
+        String msgTitle = request.getParameter("msgTitle");
 
-        System.out.println(messageList);
-        while((str=bReader.readLine()) != null) {
-            htmlContent.append(str);
-            if (str.contains("messageList") && messageList.size() > 0) {
-                htmlContent.append(outputMessageList(messageList));
-            }
-        } 
+        messageList.add(HtmlGen.buildMessage(id, userName, msgTitle, msgContent));
+
+        String html = HtmlGen.head("Discussion Board");
+        html += "<body>" + HtmlGen.h1("Discussion Board");
+        html += HtmlGen.messageTable(messageList);
+        html += HtmlGen.form("ForumPage");
+
         
         PrintWriter out = response.getWriter();
-        out.println(htmlContent);
-    }
+        out.println(html);
 
-    public String buildMessage(String userName, String msgTitle, String msgContent) {
-        // add link.
-        SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy hh:mm:ss");
-        String msgDate = format.format(new Date()); 
-        String msgHtml = "<a href=\"MessagePage?userName=" + userName + "&msgTitle=" + msgTitle + "&msgContent=" + msgContent + "&msgDate=" + msgDate + "\">";
-
-        msgHtml += "<table>";
-        msgHtml += "<tr><td>Name:</td><td>" + userName + "</td></tr>";
-        msgHtml += "<tr><td>Title:</td><td>" + msgTitle + "</td></tr>";
-        msgHtml += "<tr><td>Time:</td><td>" + msgDate + "</td></tr>";
-        msgHtml += "</table></a>";
-
-        return msgHtml;
-    }
-
-    public String outputMessageList(List<String> msgList) {
-        String listAsString = "";
-
-        for (int index = 0; index < msgList.size(); index++) {
-            listAsString += msgList.get(index);
-        }
-
-        return listAsString;
+        // POST/REDIRECT/GET to solve the duplicate data problem.
+        response.sendRedirect("/Assignment1/ForumPage");
     }
 }

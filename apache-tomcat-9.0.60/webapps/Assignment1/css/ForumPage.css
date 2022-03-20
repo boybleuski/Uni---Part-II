@@ -1,5 +1,7 @@
 table {
-    border: black 2px solid
+    border: black 2px solid;
+    width: 42%;
+    margin-bottom: 10px
 }
 
 input[type=text], select {
@@ -7,6 +9,7 @@ input[type=text], select {
     padding: 6px 0px;
     border: 1px solid black;
     border-radius: 2px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 input[type=submit] {
@@ -24,4 +27,18 @@ form {
     border-radius: 5px;
     background-color: #F0F0F0;
     padding: 20px;
+}
+
+label {
+    font-variant: small-caps;
+    font-size: 18pt;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.message-label {
+    font-variant: small-caps;
+    font-size: 18pt;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }

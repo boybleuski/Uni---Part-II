@@ -9,55 +9,65 @@ import java.text.SimpleDateFormat;
 
 @WebServlet(urlPatterns = {"/MessagePage"})
 public class MessagePage extends HttpServlet {
-    private final String FILE_LOCATION = "../webapps/Assignment1/WEB-INF/";
     private List<String> subMessageList = new ArrayList<String>();
+    private String parentName = "";
+    private String parentTitle = "";
+    private String parentContent = "";
+    private String parentDate = "";
     
+    /** MessagePage GET method - called on load.
+     * @param (HttpServletRequest) request - GET request.
+     * @param (HttpServletResponse) response - GET response.
+     * @throws ServletException
+     * @throws IOException
+     */
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        FileReader fReader = new FileReader(FILE_LOCATION + "MessagePage.html");
-        BufferedReader bReader = new BufferedReader(fReader);
-        StringBuilder htmlContent = new StringBuilder(1024);
-        String str = "";
-        String userName = request.getParameter("userName");
-        String msgTitle = request.getParameter("msgTitle");
-        String msgContent = request.getParameter("msgContent");
-        String msgDate = request.getParameter("msgDate");
+        parentName = request.getParameter("userName");
+        parentTitle = request.getParameter("msgTitle");
+        parentContent = request.getParameter("msgContent");
+        parentDate = request.getParameter("msgDate");
         
-        while((str=bReader.readLine()) != null) {
-            htmlContent.append(str);
-            if (str.contains("messageList")) {
-                htmlContent.append(getParentMessage(userName, msgTitle, msgContent, msgDate));
-            }
-        } 
+        String html = HtmlGen.head("Message");
+        html += "<body>" + HtmlGen.h1("Message from " + parentName);
+        html += HtmlGen.getParentMessage(parentName, parentTitle, parentContent, parentDate);
+        html += HtmlGen.messageTable(subMessageList);
+
+        // Prevent loading form if excessive replies exist.
+        if (subMessageList.size() < 10) {
+            html += HtmlGen.form("ForumPage");
+        } else {
+            html += HtmlGen.noMoreMessages();
+        }
 
         PrintWriter out = response.getWriter();
-        out.println(htmlContent);
+        out.println(html);
     }
 
+    /** MessagePage POST method - called when form is submitted.
+     * @param (HttpServletRequest) request - POST request.
+     * @param (HttpServletResponse) response - POST response.
+     * @throws ServletException
+     * @throws IOException
+     */
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        FileReader fReader = new FileReader(FILE_LOCATION + "MessagePage.html");
-        BufferedReader bReader = new BufferedReader(fReader);
-        StringBuilder htmlContent = new StringBuilder(1024);
-        String str = "";
+        // Add reply to list on submission.        
+        String html = HtmlGen.head("Message from " + parentName);
+        html += "<body>" + HtmlGen.h1("Message from " + parentName);
+        html += HtmlGen.getParentMessage(parentName, parentTitle, parentContent, parentDate);
+        html += HtmlGen.messageTable(subMessageList);
 
-        while((str=bReader.readLine()) != null) {
-            htmlContent.append(str);
-            if (str.contains("subMessageList")) {
-            }
-        } 
+        // Prevent loading form if excessive replies exist.
+        if (subMessageList.size() < 10) {
+            html += HtmlGen.form("ForumPage");
+        } else {
+            html += HtmlGen.noMoreMessages();
+        }
 
         PrintWriter out = response.getWriter();
-        out.println(htmlContent);
+        out.println(html);
+
+        // POST/REDIRECT/GET to solve the duplicate data problem.
+        response.sendRedirect("/Assignment1/ForumPage");
     }
 
-    public String getParentMessage(String userName, String msgTitle, String msgContent, String msgDate) {
-        // add link.
-        String msgHtml = "<table>";
-        msgHtml += "<tr><td>Name:</td><td>" + userName + "</td></tr>";
-        msgHtml += "<tr><td>Title:</td><td>" + msgTitle + "</td></tr>";
-        msgHtml += "<tr><td>Content:</td><td>" + msgContent + "</td></tr>";
-        msgHtml += "<tr><td>Time:</td><td>" + msgDate + "</td></tr>";
-        msgHtml += "</table></a>";
-
-        return msgHtml;
-    }
 }
